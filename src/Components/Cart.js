@@ -34,7 +34,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
                 <div className="text-primary">{item.productName}</div>
                 <span>price :- {item.productPrice}</span>
                 <Button color="danger " onClick={() => removeItem(item)}>
-                  Remove
+                  Remove ❌
                 </Button>
               </Col>
             </Row>
@@ -42,12 +42,12 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
         ))}
       </ListGroup>
 
-      {/* If everything is empty */}
+      {/*Grand Total is shown when there is atleast 1 item in the cart*/}
       {cartItem.length >= 1 ? (
         <Card className="text-center mt-3">
           <CardHeader>Grand Total</CardHeader>
           <CardBody>
-            Your amount for {cartItem.length} product is {amount}
+            Your amount for {cartItem.length} product is 👉 {amount}
           </CardBody>
           <CardFooter>
             <Button color="primary" onClick={buyNow}>
@@ -56,7 +56,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
           </CardFooter>
         </Card>
       ) : (
-        <h1 className="text-warning">Cart is empty</h1>
+        <h2 className="text-warning">Add items 📝</h2>
       )}
     </Container>
   );
