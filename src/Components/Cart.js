@@ -34,7 +34,7 @@ const Cart = ({ cartItem, removeItem, buyNow }) => {
                 <div className="text-primary">{item.productName}</div>
                 <span>price :- {item.productPrice}</span>
                 <Button color="danger " onClick={() => removeItem(item)}>
-                  Remove ❌
+                  Remove
                 </Button>
               </Col>
             </Row>
